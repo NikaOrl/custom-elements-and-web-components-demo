@@ -9,6 +9,13 @@
     <script src="./custom-button-element.js"></script>
   </head>
   <body>
-    <my-button></my-button>
+    <my-button content='{ "click": "console.log(`click`)"}'></my-button>
+    <script>
+      // const button = document.querySelector("my-button");
+      // button.addEventListener("click", event => {
+      //   console.log(`"click" emitted`);
+      // });
+      // setTimeout(() => (button.label = "Second Value"), 3000);
+    </script>
   </body>
 </html>

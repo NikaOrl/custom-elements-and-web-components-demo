@@ -32,8 +32,8 @@ import { EventEmitter } from "events";
       button works!
     </button>
   `,
-  styles: [],
-  encapsulation: ViewEncapsulation.Native
+  styles: []
+  // encapsulation: ViewEncapsulation.Native
 })
 export class ButtonComponent implements OnInit {
   @Input() content;

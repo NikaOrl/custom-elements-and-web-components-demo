@@ -4,10 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build": "ng build --prod --output-hashing=none",
+    "package-es5": "cat ./dist/elements-demo/runtime-es5.js ./dist/elements-demo/polyfills-es5.js ./dist/elements-demo/scripts.js ./dist/elements-demo/main-es5.js > src/custom-button-element.js",
+    "package-es5-with-tslint-set-target-es5": "cat ./dist/elements-demo/runtime.js ./dist/elements-demo/polyfills.js ./dist/elements-demo/scripts.js ./dist/elements-demo/main.js > src/custom-button-element.js",
+    "package-es2015": "cat ./dist/elements-demo/runtime-es2015.js ./dist/elements-demo/polyfills-es2015.js ./dist/elements-demo/scripts.js ./dist/elements-demo/main-es2015.js > src/custom-button-element.js",
+    "button-es5": "npm run build && npm run package-es5-with-tslint-set-target-es5",
+    "button-es2015": "npm run build && npm run package-es2015"
   },
   "private": true,
   "dependencies": {
@@ -15,13 +20,15 @@
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
+    "@angular/elements": "^8.2.14",
     "@angular/forms": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "document-register-element": "1.8.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.20",

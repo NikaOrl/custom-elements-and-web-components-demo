@@ -1,13 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ElementsDemo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <custom-root></custom-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>ElementsDemo</title>
+    <base href="./" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/custom-elements-es5-adapter.js"></script>
+    <script src="./custom-button-element.js"></script>
+  </head>
+  <body>
+    <my-button content='{ "click": "console.log(`click`)"}'></my-button>
+    <script>
+      // const button = document.querySelector("my-button");
+      // button.addEventListener("click", event => {
+      //   console.log(`"click" emitted`);
+      // });
+      // setTimeout(() => (button.label = "Second Value"), 3000);
+    </script>
+  </body>
 </html>

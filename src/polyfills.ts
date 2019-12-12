@@ -77,7 +77,7 @@ import "core-js/es/map";
 import "core-js/es/set";
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-import "core-js/es6/reflect";
+import "core-js/es/reflect";
 
 // Used for browsers with partially native support of Custom Elements
 // import '@webcomponents/custom-elements/src/native-shim';

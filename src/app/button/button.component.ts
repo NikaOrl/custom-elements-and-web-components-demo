@@ -28,28 +28,26 @@ import { EventEmitter } from "events";
 @Component({
   selector: "custom-button",
   template: `
-    <button (click)="handleClick()">
+    <button>
       button works!
     </button>
   `,
   styles: []
   // encapsulation: ViewEncapsulation.Native
 })
-export class ButtonComponent implements OnInit {
-  @Input() content;
-  serviceObject;
-
-  ngOnInit() {
-    console.log(this.content);
-    this.serviceObject = JSON.parse(this.content);
-    const funcString = this.serviceObject.click;
-    const func = new Function(funcString);
-    console.log(func);
-    this.serviceObject.click = func;
-    console.log(this.serviceObject);
-  }
-
-  handleClick() {
-    this.serviceObject.click();
-  }
+export class ButtonComponent {
+  // @Input() content;
+  // serviceObject;
+  // ngOnInit() {
+  //   console.log(this.content);
+  //   this.serviceObject = JSON.parse(this.content);
+  //   const funcString = this.serviceObject.click;
+  //   const func = new Function(funcString);
+  //   console.log(func);
+  //   this.serviceObject.click = func;
+  //   console.log(this.serviceObject);
+  // }
+  // handleClick() {
+  //   this.serviceObject.click();
+  // }
 }

@@ -10,9 +10,12 @@
     <script src="./custom-button-element.js"></script>
   </head>
   <body>
-    <my-button content='{ "click": "console.log(`click`)"}'></my-button>
     <script>
+      var _js = document.createElement('my-button');
+      _js.setAttribute('content', '{ "click": "console.log(`click`)"}');
+      document.getElementsByTagName('body')[0].appendChild(_js);
       // const button = document.querySelector("my-button");
+      // button.setAttribute('content', '{ "click": "console.log(`click`)"}');
       // button.addEventListener("click", event => {
       //   console.log(`"click" emitted`);
       // });

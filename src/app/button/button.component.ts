@@ -42,7 +42,9 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
     console.log(this.content);
     this.serviceObject = JSON.parse(this.content);
+    console.log(this.serviceObject);
     const funcString = this.serviceObject.click;
+    console.log(funcString);
     const func = new Function(funcString);
     console.log(func);
     this.serviceObject.click = func;

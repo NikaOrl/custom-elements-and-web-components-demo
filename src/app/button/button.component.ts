@@ -40,15 +40,15 @@ export class ButtonComponent implements OnInit {
   serviceObject;
 
   ngOnInit() {
-    console.log(this.content);
+    console.log('1_1', this.content);
     this.serviceObject = JSON.parse(this.content);
-    console.log(this.serviceObject);
+    console.log('1_2', this.serviceObject);
     const funcString = this.serviceObject.click;
-    console.log(funcString);
+    console.log('1_3', funcString);
     const func = new Function(funcString);
-    console.log(func);
+    console.log('1_4', func);
     this.serviceObject.click = func;
-    console.log(this.serviceObject);
+    console.log('1_5', this.serviceObject);
   }
 
   handleClick() {
